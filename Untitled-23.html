@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BlogMarket</title>
+</head>
+<body>
+  <h1>Available Blogs</h1>
+  <ul>
+    {% for blog in blogs %}
+      <li>
+        <a href="/blog/{{ blog[0] }}">{{ blog[1] }}</a> by {{ blog[3] }} – ₹{{ blog[2] }}
+      </li>
+    {% endfor %}
+  </ul>
+  <p>
+    <a href="/login">Login</a> |
+    <a href="/register">Register</a> |
+    <a href="/dashboard">Dashboard</a> |
+    <a href="/my-purchases">My Purchases</a>
+  </p>
+</body>
+</html>

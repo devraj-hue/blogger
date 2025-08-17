@@ -1,0 +1,6 @@
+<h2>Your Purchased Blogs</h2>
+<ul>
+  {% for blog in purchases %}
+    <li>{{ blog[0] }} by {{ blog[2] }} – ₹{{ blog[1] }}</li>
+  {% endfor %}
+</ul>

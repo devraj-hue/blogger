@@ -1,0 +1,9 @@
+<h1>Available Blogs</h1>
+<ul>
+  {% for blog in blogs %}
+    <li>
+      <a href="/blog/{{ blog[0] }}">{{ blog[1] }}</a> by {{ blog[3] }} – ₹{{ blog[2] }}
+    </li>
+  {% endfor %}
+</ul>
+<a href="/login">Login</a> | <a href="/register">Register</a>

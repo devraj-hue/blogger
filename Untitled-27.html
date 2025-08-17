@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ blog[0] }}</title>
+</head>
+<body>
+  <h1>{{ blog[0] }}</h1>
+  <p>Author: {{ blog[3] }}</p>
+  <p>Price: ₹{{ blog[2] }}</p>
+
+  {% if unlocked %}
+    <p>{{ blog[1] }}</p>
+    <a href="/download/{{ blog_id }}">Download Blog</a>
+  {% else %}
+    <p><em>This blog is locked. Buy to unlock full content.</em></p>
+    <form action="/buy/{{ blog_id }}" method="POST">
+      <button type="submit">Buy Now</button>
+    </form>
+  {% endif %}
+</body>
+</html>
